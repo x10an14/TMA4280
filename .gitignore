@@ -1,0 +1,7 @@
+#Sublime
+*.sublime*
+
+#LaTeX
+*.aux
+*.log
+*.pdf
