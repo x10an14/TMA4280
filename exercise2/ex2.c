@@ -13,7 +13,7 @@ int main(int argc, char const *argv[]){
 
 	srand((unsigned)time(NULL));
 
-	double userConst = argv[1];
+	double userConst = atof(argv[1]);
 
 	height = randIntVal; //Give a random number between 1-20
 	while(height <= 1){
@@ -32,7 +32,7 @@ int main(int argc, char const *argv[]){
 	return 0;
 }
 
-void printMatrix(void **ptr, int height, int width){
+void printMatrix(double **ptr, int height, int width){
 	for (int i = 0; i < height; ++i){
 		printf("[");
 		for (int j = 0; j < width-1; ++j){
@@ -42,7 +42,7 @@ void printMatrix(void **ptr, int height, int width){
 	}
 }
 
-void printVector(void *ptr, int length){
+void printVector(double *ptr, int length){
 	printf("[");
 	for (int i = 0; i < length-1; ++i){
 		printf("%.2f,\t", ptr[i]);
@@ -70,15 +70,15 @@ void multiplyConstantWithVector(double constant, double *vector, int length){
 	}
 }
 
-double* multiplyMatrixWithVector(double **matrix, int height, int width,
+void multiplyMatrixWithVector(double **matrix, int height, int width,
 	double *vector, int length, double *resultVector){
 
 }
 
-void transposeVector(double *vector, int length){
+void transposeVector(double *vector, int length, double *resultVector){
 
 }
 
-double* multiplyVectorWithVector(double *vec1, double vec2*, int length){
+void multiplyVectorWithVector(double *vec1, double *vec2, int length, double *resultVector){
 
 }
