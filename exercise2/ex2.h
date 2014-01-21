@@ -9,10 +9,14 @@ int height, width;
 void printMatrix(void **ptr, int height, int width);
 void printVector(void *ptr, int length);
 
-double* randomVector(int length);
-double** randomMatrix(int height, int width);
+double* randomVector(int length, double *resultVector);
+double** randomMatrix(int height, int width, double **resultMatrix);
 
-extern const double *vecX, *vecA, *vecB, *vecY, *vecAlpha;
-extern const double **matA;
+void multiplyConstantWithVector(double constant, double *vector, int length);
+double* multiplyMatrixWithVector(double **matrix, int height, int width,
+	double *vector, int length, double *resultVector);
+double* transposeVector(double *vector, int length);
+double* multiplyVectorWithVector(double *vec1, double vec2*, int length);
+
 
 #endif

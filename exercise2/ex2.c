@@ -33,17 +33,52 @@ int main(int argc, char const *argv[]){
 }
 
 void printMatrix(void **ptr, int height, int width){
-
+	for (int i = 0; i < height; ++i){
+		printf("[");
+		for (int j = 0; j < width-1; ++j){
+			printf("%.2f,\t", ptr[i][j]);
+		}
+		printf("%.2f]\n", ptr[i][width-1]);
+	}
 }
 
 void printVector(void *ptr, int length){
+	printf("[");
+	for (int i = 0; i < length-1; ++i){
+		printf("%.2f,\t", ptr[i]);
+	}
+	printf("%.2f]\n", ptr[length-1]);
+}
+
+void randomVector(int length, double *resultVector){
+	for (int i = 0; i < length; ++i){
+		resultVector[i] = randFloVal;
+	}
+}
+
+void randomMatrix(int height, int width, double **resultMatrix){
+	for (int i = 0; i < height; ++i){
+		for (int j = 0; j < width; ++j){
+			resultMatrix[i][j] = randFloVal;
+		}
+	}
+}
+
+void multiplyConstantWithVector(double constant, double *vector, int length){
+	for (int i = 0; i < length; ++i){
+		vector[i] *= constant;
+	}
+}
+
+double* multiplyMatrixWithVector(double **matrix, int height, int width,
+	double *vector, int length, double *resultVector){
 
 }
 
-double* randomVector(int length){
+void transposeVector(double *vector, int length){
 
 }
 
-double** randomMatrix(int height, int width){
+double* multiplyVectorWithVector(double *vec1, double vec2*, int length){
 
 }
