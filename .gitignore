@@ -5,3 +5,11 @@
 *.aux
 *.log
 *.pdf
+
+#Run files
+ex[0-9]
+
+#Log files
+*.out*
+*.log*
+*.err*
